@@ -27,3 +27,24 @@ for item in data1:
     price = price1[1].split('<')
     prices.append(price[0])
 print(prices)
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x_data1 = []
+x_data = np.linspace(0, 10, 30)
+y_data = []
+
+for item in names:
+    x_data1.append(item)
+for item in prices:
+    y_data.append(item)
+
+plt.xticks(x_data, x_data1, size=5)
+plt.plot(x_data, y_data, 'bo-', label="price curve", linewidth=1)
+plt.title(u"Price of Company")
+plt.legend()
+plt.show()
+print("over")
+
