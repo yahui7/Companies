@@ -14,6 +14,7 @@ for item in com_names:
     name1 = item.split('>')
     name = name1[1].split('<')
     names.append(name[0])
+print(names)
 
 pat_price = '<td class="wsod_aRight">.*?<\/span>'
 data = re.compile(pat_price).findall(html)
